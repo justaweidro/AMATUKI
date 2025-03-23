@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+
+[class*="fontawesome-"]
+  * {
+    box-sizing: border-box;
+    &:before, &:after {
+      box-sizing: border-box;
+    }
+  }
+  
+  body {
+    background: #222;
+    margin: 0;
+    font-family:'Caveat',cursive;
+    font-size: 20px;
+    color: #FFF;
+  }
+  
+  .上バー {
+    max-width: 60em;
+    min-width: 45em;
+    margin: 0 auto;
+    padding: 0 2em;
+    text-align: center;
+  }
+
+  nav {
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    top: 0;
+    z-index: 3;
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      float: right;
+    }
+    li {
+      display: inline-block;
+      padding: 2em;
+      text-align: center;
+      transition: all .2s;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+    a {
+      color: #FFF;
+      text-decoration: none;
+      transition: all .3s;
+      &:hover {
+        color: #DDD;
+      }
+    }
+  }
+  
+  #上 {
+    background: #FD7777;
+    position: fixed;
+    height: 5em;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+  }
+  
+  header {
+    position: relative;
+    background-color: #FD7777;
+    padding: 5em 0 5em;
+    z-index: 2;
+    h1 {
+      font-size: 4em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+  
+  #本文 {
+    background: #E7E3DA;
+    min-height: 100vh; /* 画面の高さに応じて最低限の高さを確保 */
+    padding: 5em 0;
+}
+
+#本文 p {
+    line-height: 2em;
+    font-size: 1.4em;
+    margin: 0;
+    color: #222;
+}
+
+
+.rolling-text {
+  display: inline-block;
+  font-family: 'Caveat', cursive;
+  font-size: 60px;
+  line-height: 72px;
+  letter-spacing: 24px;
+  height: 72px;
+  text-decoration: none;
+  overflow: hidden;
+  color: #1a1a1a;
+}
+
+.rolling-text:hover .letter, .rolling-text.play .letter {
+  transform: translateY(-100%);
+}
+.rolling-text .block:last-child {
+  color: #0000ff;
+}
+.rolling-text .letter {
+  display: inline-block;
+  transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.letter:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.letter:nth-child(2) {
+  transition-delay: 0.015s;
+}
+
+.letter:nth-child(3) {
+  transition-delay: 0.03s;
+}
+
+.letter:nth-child(4) {
+  transition-delay: 0.045s;
+}
+
+.letter:nth-child(5) {
+  transition-delay: 0.06s;
+}
+
+.letter:nth-child(6) {
+  transition-delay: 0.075s;
+}
+
+.letter:nth-child(7) {
+  transition-delay: 0.09s;
+}
+
+.letter:nth-child(8) {
+  transition-delay: 0.105s;
+}
+
+.letter:nth-child(9) {
+  transition-delay: 0.12s;
+}
+
+.letter:nth-child(10) {
+  transition-delay: 0.135s;
+}
+
+.letter:nth-child(11) {
+  transition-delay: 0.15s;
+}
+
+.letter:nth-child(12) {
+  transition-delay: 0.165s;
+}
+
+.letter:nth-child(13) {
+  transition-delay: 0.18s;
+}
+
+.letter:nth-child(14) {
+  transition-delay: 0.195s;
+}
+
+.letter:nth-child(15) {
+  transition-delay: 0.21s;
+}
+
+.letter:nth-child(16) {
+  transition-delay: 0.225s;
+}
+
+.letter:nth-child(17) {
+  transition-delay: 0.24s;
+}
+
+.letter:nth-child(18) {
+  transition-delay: 0.255s;
+}
+
+.letter:nth-child(19) {
+  transition-delay: 0.27s;
+}
+
+.letter:nth-child(20) {
+  transition-delay: 0.285s;
+}
+
+.letter:nth-child(21) {
+  transition-delay: 0.3s;
+}
+
+.説明orタイトル {
+  font-size: 30px;
+  font-family: 'Orbitron', sans-serif; 
+  color: #000000;
+}
+
+.ブログ一覧 {
+  font-size: 24px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.ブログ線 {
+  width: 80%;
+  border: none;
+  border-top: 2px solid #007BFF;
+  margin: 0 auto 20px auto;
+}
+
+
+.ブログボックス群 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.ブログボックス {
+  background-color: #ffffff;
+  padding: 40px;
+  border-left: 5px solid #007BFF;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  text-align: left;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.ブログボックス:hover {
+  background-color: #f0f8ff;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.ブログボックス a {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.ブログタイトル {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
+
+.年月日 {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.下バー {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}
+
+.下バー a {
+  color: #FFD700;
+  text-decoration: none;
+}
+
+.下バー a:hover {
+  text-decoration: underline;
+}
+
+.blog-content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #333;
+  text-align: left;
+}
+
+.blog-content p {
+  margin-bottom: 15px;
+}
+
+.blog-content strong {
+  color: #007BFF; /* 強調部分を青色に */
+}
+
+.blog-content em {
+  font-style: italic;
+  color: #555; /* イタリック部分をグレーに */
+}
+
+.profile {
+  text-align: center;
+  padding: 50px 30px; /* 上下に広めの余白を追加 */
+  background-color: #f9f9f9;
+  margin: 50px auto; /* 外側に余白を追加 */
+  max-width: 900px; /* 横幅を制限して中央に配置 */
+  border-radius: 15px; /* 角を少し丸める */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 軽い影をつける */
+}
+
+.profile-title {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px; /* 内側の余白を追加 */
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007BFF;
+  margin-bottom: 10px; /* 画像の下に余白を作る */
+}
+
+.profile-text {
+  font-family: 'Noto Serif JP', sans-serif;
+  max-width: 800px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  text-align: left;
+  padding: 20px; /* 内側の余白 */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.highlight {
+  color: #007BFF;
+  font-weight: bold;
+}
